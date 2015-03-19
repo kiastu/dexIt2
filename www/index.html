@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>DEX-SDK Mobile App Template</h1>
-            <!-- use simlar structure for your own player reference-->
 
-            <!--  <iframe class="player" id="playerFrame" src="http://player.dexit.co/player/?arg=something"></iframe> -->
-            <!-- Uncomment to test data extraction plugin is working-->
-            <!-- <iframe id="playerFrame" src="test/iframetest.html"></iframe> -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-paper.css"/>
+    <title>Iteration 2</title>
+</head>
+
+<body>
+    <div class="app">
+        <iframe class="player" id="playerFrame" src="http://sc-playback-daily.herokuapp.com/player/?andrew=1"></iframe>
+        <iframe id="playerFrame" src="test/iframetest.html"></iframe>
+        <iframe id="dataFrame" src="datacollector.html"></iframe>
+        <div>
+            <input type="text" value="Leave a comment!">
+            <button class="btn-default" > Submit!</button>
         </div>
+        <h3> How did you like the course?</h3>
+        <form action="">
+            <input type="radio" name="lie" value="love">Loved it<br>
+            <input type="radio" name="like" value="hate">Hated it<br>
+        </form>
+
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/sdk.js"></script>
         <!-- Sample extract data plugin.  Uncomment for testing -->
-        <!--<script type="text/javascript" src="test/js/extractdata.js"></script> -->
-    </body>
+        <script type="text/javascript" src="test/js/extractdata.js"></script>
+    </div>
+
+</body>
+
 </html>

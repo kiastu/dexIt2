@@ -22,7 +22,7 @@
  * This file only is a sample provided based off of the cordova sample for your use
  * @type {{initialize: Function, bindEvents: Function, onDeviceReady: Function, receivedEvent: Function}}
  */
-var app = {
+ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -40,8 +40,17 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         alert("device ready");
-        app.receivedEvent('deviceready');
+        navigator.geolocation.getCurrentPosition(
+          function(position) {
+              alert(position.coords.latitude + ',' + position.coords.longitude);
+              app.receivedEvent('deviceready');
+          },
+          function() {
+              alert('Error getting location');
+          });
+        return false;
     },
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
 
